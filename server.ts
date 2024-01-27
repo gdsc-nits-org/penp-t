@@ -23,4 +23,6 @@ app.use(`${Constants.System.ROOT}/`, Routers.Health);
 // Error Handlers
 app.use(Middlewares.Error.errorHandler);
 
-export default app;
+app.listen(Constants.System.PORT, () => {
+  console.log(`Server started on port ${Constants.System.PORT}`);
+});
