@@ -12,6 +12,7 @@
     "esbuild": "node esbuild.mjs",
     "compile": "tsc",
     "lint": "eslint . --ext .ts --fix",
+    "olint": "oxlint",
     "pretty": "pnpm prettier --write .",
     "precommit": "lint-staged",
     "prepare": "npx simple-git-hooks",
@@ -27,8 +28,9 @@
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "esbuild": "^0.17.4",
-    "eslint": "^8.32.0",
+    "eslint": "^8.56.0",
     "lint-staged": "^13.1.0",
+    "oxlint": "^0.2.8",
     "prettier": "^2.8.3",
     "prisma": "^4.9.0",
     "simple-git-hooks": "^2.8.1",
@@ -45,7 +47,7 @@
   },
   "lint-staged": {
     "*.ts": [
-      "pnpm lint",
+      "oxlint",
       "pnpm pretty"
     ]
   },
